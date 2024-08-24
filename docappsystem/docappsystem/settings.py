@@ -81,17 +81,6 @@ WSGI_APPLICATION = 'docappsystem.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'docapp',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '8080',
-        
-    }
-}
 
 
 # Password validation
