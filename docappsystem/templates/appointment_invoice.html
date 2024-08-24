@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .value {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COSMOS Hospitals | Appointment Form</h1>
+        <hr>
+        <h4 style = "padding-left: 20px;">"A physician who can cure a disease merely by the sight of the patient without prescribing medicine is truly a great physician."</h4>
+
+            <p style="text-align: right;">– Charaka Samhita</p>
+        <p style="color: blue;padding-left: 20px;"><strong>Note :</strong>Please bring Appointment form while coming to hospital.</p>
+        <ul>
+            <li><span class="label ">Appointment Number: </span><span class="value">{{ patient.appointmentnumber }}</span></li>
+            <li><span class="label">Patient Name: </span><span class="value">{{ patient.fullname }}</span></li>
+            <li><span class="label">Contact Number: </span><span class="value">{{ patient.mobilenumber }}</span></li>
+            <li><span class="label">Email: </span><span class="value">{{ patient.email }}</span></li>
+            <li><span class="label">Date of Appointment: </span><span class="value">{{ patient.date_of_appointment }}</span></li>
+            <li><span class="label">Time of Appointment: </span><span class="value">{{ patient.time_of_appointment }}</span></li>
+            <li><span class="label">Prescribed Medicine: </span><span class="value">{{ patient.prescription|default:'Not Prescribed Yet' }}</span></li>
+            <li><span class="label">Recommended Test: </span><span class="value">{{ patient.recommendedtest|default:'Not Recommended Yet' }}</span></li>
+            <li><span class="label">Doctor Remark: </span><span class="value">{{ patient.remark|default:'Not Updated Yet' }}</span></li>
+            <li><span class="label">Status: </span><span class="value" style="color: red">{{ patient.status }}</span></li>
+        </ul>
+    </div>
+    <br>
+    <center><h2>Thank you, have a great day</h2></center>
+</body>
+</html>

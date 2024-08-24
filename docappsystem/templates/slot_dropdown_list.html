@@ -1,0 +1,8 @@
+{% for timeslot in timeslots %}
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="timeslot" id="timeslot{{ timeslot.id }}" value="{{ timeslot.id }}">
+    <label class="form-check-label" for="timeslot{{ timeslot.id }}">
+        {{ timeslot.start_time }} - {{ timeslot.end_time }}
+    </label>
+</div>
+{% endfor %}
